@@ -9,7 +9,6 @@ class RowExample extends StatelessWidget {
       padding: const EdgeInsets.only(top: 86.0),
       child: SizedBox(
         //height: double.infinity,
-        //comentario de prueba
         child: const Row(
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           //crossAxisAlignment: CrossAxisAlignment.center,
