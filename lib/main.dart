@@ -12,13 +12,23 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: ImageExample()),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Mi super app"),
+          backgroundColor: Colors.blueGrey,
+          foregroundColor: Colors.white,
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.access_alarm)),
+          ],
+        ),
+        backgroundColor: Colors.orange,
+        body: ImageExample(),
+        floatingActionButton: FloatingActionButton(onPressed: () {}, ),
+      ),
     );
   }
 }
-
