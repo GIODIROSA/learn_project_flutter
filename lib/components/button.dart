@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class buttonExample extends StatelessWidget {
-  const buttonExample({super.key});
+class ButtonExample extends StatelessWidget {
+  const ButtonExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,10 +9,14 @@ class buttonExample extends StatelessWidget {
       children: [
         Spacer(),
         ElevatedButton(
-          onPressed: () => print("Pulsado!"),
-          child: Text("Soy un botón :)"),
+          onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text("Pulsado!")),
+          ),
+          child: const Text("Soy un botón :)"),
           onLongPress: () {
-            print("Pulsadooooo!");
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text("Pulsadooooo!")),
+            );
           },
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all(Colors.red),
